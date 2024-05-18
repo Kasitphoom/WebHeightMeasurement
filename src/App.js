@@ -13,7 +13,7 @@ const Info = () => {
   return (
     <div className="mainctn">
       <Route exact path="/">
-        {true ? <Home /> : <Redirect to="/login" />}
+        <Redirect to="/exercise" />
       </Route>
 
       <Route exact path="/graph" component={Graph} />
