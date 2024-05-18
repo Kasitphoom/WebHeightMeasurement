@@ -37,13 +37,14 @@ footer nav {
 }
 footer nav ul {
   list-style-type: none;
-  width: 95%;
+  width: 100%;
   margin: auto;
   height: 70px;
 }
 footer nav ul li {
+  margin-left: 5rem;
   display: inline-block;
-  width: 16%;
+  width: 18%;
 }
 footer nav ul li a {
   text-decoration: none;
