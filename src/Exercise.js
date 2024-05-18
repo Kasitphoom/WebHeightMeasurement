@@ -39,29 +39,29 @@ const Exercise = () => {
       const keypoints = pose["keypoints"];
       const createKeypoint = (x, y, part) => ({ position: { x, y }, score: 0.9, part });
 
-      if (keypoints[1] && keypoints[2]) {
-          const lefteye = keypoints[1];
-          const righteye = keypoints[2];
-          const eye_x_midpoint = (lefteye.position.x + righteye.position.x) / 2;
-          const eye_y_midpoint = (lefteye.position.y + righteye.position.y) / 2;
-          keypoints[17] = createKeypoint(eye_x_midpoint, eye_y_midpoint, "eye_midpoint");
-      }
-
-      if (keypoints[5] && keypoints[6]) {
-          const leftshoulder = keypoints[5];
-          const rightshoulder = keypoints[6];
-          const shoulder_x_midpoint = (leftshoulder.position.x + rightshoulder.position.x) / 2;
-          const shoulder_y_midpoint = (leftshoulder.position.y + rightshoulder.position.y) / 2;
-          keypoints[18] = createKeypoint(shoulder_x_midpoint, shoulder_y_midpoint, "shoulder_midpoint");
-      }
-
-      if (keypoints[11] && keypoints[12]) {
-          const leftpelvis = keypoints[11];
-          const rightpelvis = keypoints[12];
-          const pelvis_x_midpoint = (leftpelvis.position.x + rightpelvis.position.x) / 2;
-          const pelvis_y_midpoint = (leftpelvis.position.y + rightpelvis.position.y) / 2;
-          keypoints[19] = createKeypoint(pelvis_x_midpoint, pelvis_y_midpoint, "pelvis_midpoint");
-      }
+      if (keypoints[1].score > 0.5 && keypoints[2].score > 0.5) {
+        const lefteye = keypoints[1];
+        const righteye = keypoints[2];
+        const eye_x_midpoint = (lefteye.position.x + righteye.position.x) / 2;
+        const eye_y_midpoint = (lefteye.position.y + righteye.position.y) / 2;
+        keypoints[17] = createKeypoint(eye_x_midpoint, eye_y_midpoint, "eye_midpoint");
+    }
+    
+    if (keypoints[5].score > 0.5 && keypoints[6].score > 0.5) {
+        const leftshoulder = keypoints[5];
+        const rightshoulder = keypoints[6];
+        const shoulder_x_midpoint = (leftshoulder.position.x + rightshoulder.position.x) / 2;
+        const shoulder_y_midpoint = (leftshoulder.position.y + rightshoulder.position.y) / 2;
+        keypoints[18] = createKeypoint(shoulder_x_midpoint, shoulder_y_midpoint, "shoulder_midpoint");
+    }
+    
+    if (keypoints[11].score > 0.5 && keypoints[12].score > 0.5) {
+        const leftpelvis = keypoints[11];
+        const rightpelvis = keypoints[12];
+        const pelvis_x_midpoint = (leftpelvis.position.x + rightpelvis.position.x) / 2;
+        const pelvis_y_midpoint = (leftpelvis.position.y + rightpelvis.position.y) / 2;
+        keypoints[19] = createKeypoint(pelvis_x_midpoint, pelvis_y_midpoint, "pelvis_midpoint");
+    }
 
       console.log(keypoints);
 

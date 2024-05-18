@@ -119,21 +119,25 @@ export function drawSkeleton(keypoints, minConfidence, ctx, scale = 1) {
     );
   });
 
-  drawSegment(
-    toTuple(keypoints[17].position),
-    toTuple(keypoints[18].position),
-    color,
-    scale,
-    ctx
-  );
-
-  drawSegment(
-    toTuple(keypoints[18].position),
-    toTuple(keypoints[19].position),
-    color,
-    scale,
-    ctx
-  );
+  if (keypoints[17] && keypoints[18]) {
+    drawSegment(
+      toTuple(keypoints[17].position),
+      toTuple(keypoints[18].position),
+      color,
+      scale,
+      ctx
+    );
+  }
+  
+  if (keypoints[18] && keypoints[19]) {
+    drawSegment(
+      toTuple(keypoints[18].position),
+      toTuple(keypoints[19].position),
+      color,
+      scale,
+      ctx
+    );
+  }
 }
 
 /**
