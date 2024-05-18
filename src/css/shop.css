@@ -1,0 +1,79 @@
+.shops {
+  background-color: white;
+  width: 95%;
+  height: 50vh;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-row: 95px;
+  row-gap: 1rem;
+  margin: auto;
+  padding: 1rem;
+}
+.shop {
+  margin: auto;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 40% 50%;
+  grid-template-rows: 100px;
+  column-gap: 3rem;
+  padding: 1rem;
+}
+.coupon .logo {
+  width: 100%;
+  height: 100%;
+  background-color: #fff2cc;
+  border-radius: 20px;
+}
+.coupon .logo img {
+  height: 100%;
+  display: block;
+  margin: auto;
+}
+.coupon {
+  width: 100%;
+  height: 100%;
+  background-color: #ffc000;
+  border: #bf9000 3px solid;
+}
+.coupon .name h1 {
+  margin-top: 1rem;
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+.coupon .name h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #bc140c;
+  text-align: center;
+}
+.healthy {
+  width: 100%;
+  height: 100%;
+  background-color: #70ad47;
+  border: #548235 3px solid;
+}
+.healthy .logo {
+  width: 100%;
+  height: 100%;
+}
+.healthy .logo img {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+.healthy .name h1 {
+  margin-top: 1rem;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #e2f0d9;
+  text-align: center;
+}
+.healthy .name h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}

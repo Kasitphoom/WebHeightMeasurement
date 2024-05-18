@@ -1,0 +1,36 @@
+.exit {
+  margin: 2rem;
+  padding: 2rem;
+  background-color: #dc180e;
+  color: white;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+.exit i {
+  font-size: 3rem;
+  color: white;
+}
+.exerType {
+  vertical-align: middle;
+  width: 70%;
+  background-color: white;
+  border-radius: 10px;
+  height: 7.2rem;
+}
+.exerflex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.exerType p {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.exerType :nth-child(1) {
+  margin: 1rem;
+}
+.exerType :nth-child(2) {
+  text-align: right;
+  margin: 1rem;
+  color: #bc140c;
+}

@@ -1,0 +1,78 @@
+.logo {
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+form {
+  width: 85%;
+  background-color: white;
+  border-radius: 10px;
+  margin: auto;
+  overflow: auto;
+}
+label {
+  font-size: 3rem;
+  font-weight: bold;
+}
+input {
+  font-size: 3rem;
+  font-family: "Circular", sans-serif;
+}
+form .inlineb {
+  margin-top: 3rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+form .small {
+  margin: 0 3rem;
+}
+.small input,
+.inlineb input {
+  border-radius: 20px;
+  border: #8e3b46 3px solid;
+  outline: none;
+  width: 10rem;
+  text-align: center;
+}
+.large {
+  width: 90%;
+  margin: 1rem auto;
+}
+.large input {
+  border-radius: 20px;
+  border: #5b9bd5 3px solid;
+  outline: none;
+  width: 100%;
+}
+.large input[type="submit"] {
+  border-radius: 20px;
+  border: #c55a11 3px solid;
+  outline: none;
+  width: 40%;
+  background-color: #ffc000;
+  color: white;
+  font-weight: bolder;
+}
+.large a {
+  border-radius: 20px;
+  border: #a7a7a7 3px solid;
+  outline: none;
+  width: 50%;
+  background-color: #f2f2f2;
+  color: #595959;
+  font-weight: bolder;
+  text-align: center;
+  text-decoration: none;
+  font-size: 3rem;
+}
+.lastctnlog {
+  display: flex;
+  margin: 3rem auto;
+  justify-content: space-around;
+}
+[data-input][type="number"]::-webkit-inner-spin-button,
+[data-input][type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}

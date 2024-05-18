@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Circular";
+  src: url("./font/circular.ttf") format("truetype"),
+    url("./font/circular.woff") format("woff");
+}
+@font-face {
+  font-family: "Minecraft";
+  src: url("./font/minecraft-webfont.ttf") format("truetype"),
+    url("./font/minecraft-webfont.woff") format("woff"),
+    url("./font/minecraft-webfont.eot") format("opentype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Circular", sans-serif;
+}
+body {
+  background-color: #f2f3f8;
+  height: 100vh;
+}
+footer {
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  background-color: #f13027;
+}
+footer nav {
+  width: 99%;
+  color: white;
+  padding: 1rem 0;
+  margin: 0 auto;
+}
+footer nav ul {
+  list-style-type: none;
+  width: 95%;
+  margin: auto;
+  height: 70px;
+}
+footer nav ul li {
+  display: inline-block;
+  width: 16%;
+}
+footer nav ul li a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+footer nav ul li a * {
+  display: block;
+}
+footer nav ul li a i {
+  font-size: 3rem;
+}
+footer nav ul li a p {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.special {
+  width: 12rem;
+  height: 12rem;
+  background-color: white;
+  border-radius: 50%;
+  transform: translateY(-40%);
+  border: #c32b24 solid 3px;
+  position: relative;
+}
+
+.special a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.special .icon {
+  margin: 0 auto;
+}
+.special a i {
+  color: #f13027;
+  font-size: 4.5rem;
+}
+.special a p {
+  color: black;
+  font-size: 2.5rem;
+  position: relative;
+  margin: 0;
+}
+.icon {
+  width: fit-content;
+  margin: auto;
+}
+.inlineb {
+  display: inline-block;
+}
+.vt {
+  vertical-align: top;
+}
+.vm {
+  vertical-align: middle;
+}
+.mainlogo img {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+}
+.mainlogo {
+  width: calc(100% - 6rem);
+}
+.rem4 {
+  font-size: 4rem;
+}
+.normal {
+  font-size: 1.6rem;
+}
+.rem2 {
+  font-size: 2rem;
+}

@@ -1,0 +1,205 @@
+.balance {
+  width: 90%;
+  background-image: url("../image/balance.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  border-radius: 15px;
+  margin: 2rem auto;
+  overflow: auto;
+  box-shadow: 0 10px 20px #8a8a8a;
+}
+.balance h1 {
+  font-size: 3rem;
+  color: white;
+  margin: 0 2rem;
+  margin-top: 1rem;
+}
+.balance .bar {
+  width: calc(80% - 60px);
+  height: 4rem;
+  margin: 4rem auto;
+  background-color: white;
+  border-radius: 20px;
+  border: #ffc002 3px solid;
+  margin-left: 2rem;
+  position: relative;
+}
+.bar p {
+  font-size: 4rem;
+  margin-left: 3rem;
+  color: #c55a11;
+  font-weight: bold;
+  line-height: 4rem;
+  width: fit-content;
+  position: absolute;
+}
+
+.balance .label {
+  font-family: "Minecraft", sans-serif;
+  width: 10rem;
+  height: 10rem;
+  background-color: white;
+  border-radius: 50%;
+  transform: translateX(-25%);
+  border: #ffc002 3px solid;
+  box-shadow: 5px 5px #d6a200;
+  margin-bottom: 2rem;
+}
+.label p {
+  text-align: center;
+  line-height: 100px;
+  color: #c55a11;
+}
+.name p {
+  margin: 0 2rem 2rem 2rem;
+  color: #d9d9d9;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+}
+.experience {
+  background-color: white;
+  width: fit-content;
+  margin-left: 1rem;
+  margin-right: 3rem;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 10.1rem;
+  position: relative;
+}
+.experience h2 {
+  font-size: 2rem;
+}
+.experience h3 {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+.experience p {
+  font-weight: bold;
+  text-align: center;
+}
+.experience a {
+  width: 87%;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #5b9bd5;
+  padding: 1rem 0;
+  border-radius: 10px;
+  border: #2e75b6 3px solid;
+  position: absolute;
+}
+.smallLabelxp p {
+  width: 100%;
+  text-align: center;
+  line-height: 5rem;
+  font-family: "Minecraft", sans-serif;
+  font-weight: normal;
+  color: #548235;
+}
+.smallLabelxp {
+  position: absolute;
+  float: right;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  background-color: #e2f0d9;
+  border: #7eb558 3px solid;
+  box-shadow: 3px 3px #548235;
+  transform: translateX(-110%) translateY(-35%);
+}
+.smallLabelcal p {
+  width: 100%;
+  text-align: center;
+  line-height: 5rem;
+  font-family: "Minecraft", sans-serif;
+  font-weight: normal;
+  color: #2e75b6;
+}
+.smallLabelcal {
+  position: absolute;
+  float: right;
+  width: fit-content;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  background-color: #deebf7;
+  border: #5a9ad4 3px solid;
+  box-shadow: 3px 3px #2e75b6;
+  transform: translateX(-110%) translateY(-35%);
+}
+.showcalories {
+  width: 95%;
+  margin: 1rem auto;
+  background-color: white;
+  border-radius: 10px;
+  overflow: auto;
+}
+.showcalories h1 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin: 1rem 6rem 0rem 2rem;
+  width: fit-content;
+}
+.showcalories strong {
+  font-size: 3rem;
+  color: #2e75b6;
+}
+.showcalories p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.showcalories .bar {
+  width: 80%;
+  height: 8rem;
+  border: #2e75b6 3px solid;
+  border-radius: 20px;
+  margin: 2rem auto;
+  background-color: #deebf7;
+}
+.showcalories .bar p {
+  line-height: 8rem;
+  text-align: center;
+  font-size: 3rem;
+  color: #404040;
+}
+.record {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  column-gap: 3rem;
+  grid-template-rows: 8rem;
+}
+.record .content {
+  border-radius: 10px;
+  background-color: white;
+}
+.record .circle {
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  margin: 1rem;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border: 5px solid #e7e6e6;
+}
+
+.record .circle p {
+  text-align: center;
+  line-height: 5.5rem;
+  font-size: 2rem;
+  width: 100%;
+  font-weight: bold;
+}
+.record p {
+  font-size: 1.2rem;
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.record h1 {
+  font-size: 2rem;
+}
