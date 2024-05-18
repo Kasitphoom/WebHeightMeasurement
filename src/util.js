@@ -103,12 +103,14 @@ export function drawSegment([ay, ax], [by, bx], color, scale, ctx) {
 /**
  * Draws a pose skeleton by looking up all adjacent keypoints/joints
  */
+
+let eartoear_length = 0;
 export function drawSkeleton(keypoints, minConfidence, ctx, scale = 1) {
   const adjacentKeyPoints = posenet.getAdjacentKeyPoints(
     keypoints,
     minConfidence
   );
-  
+
   adjacentKeyPoints.forEach((keypoints) => {
     drawSegment(
       toTuple(keypoints[0].position),
@@ -128,7 +130,7 @@ export function drawSkeleton(keypoints, minConfidence, ctx, scale = 1) {
       ctx
     );
   }
-  
+
   if (keypoints[18] && keypoints[19]) {
     drawSegment(
       toTuple(keypoints[18].position),
@@ -138,6 +140,58 @@ export function drawSkeleton(keypoints, minConfidence, ctx, scale = 1) {
       ctx
     );
   }
+
+  if (keypoints[7].score > 0.5 && keypoints[9].score > 0.5) {
+    const leftear = keypoints[7];
+    const rightear = keypoints[9];
+    const temp_eartoear_length = Math.sqrt(
+      Math.pow(leftear.position.x - rightear.position.x, 2) +
+        Math.pow(leftear.position.y - rightear.position.y, 2)
+    );
+    if (Math.abs(eartoear_length - temp_eartoear_length) > 6) {
+      eartoear_length = temp_eartoear_length;
+    }
+    const averagelength_in_cm = 27.5;
+    const cm_per_pixel = averagelength_in_cm / eartoear_length;
+    let height_in_pixels = 0;
+
+    if (keypoints[17] && keypoints[18]) {
+      height_in_pixels += Math.sqrt(
+        Math.pow(keypoints[17].position.x - keypoints[18].position.x, 2) +
+          Math.pow(keypoints[17].position.y - keypoints[18].position.y, 2)
+      );
+    }
+
+    if (keypoints[18] && keypoints[19]) {
+      height_in_pixels += Math.sqrt(
+        Math.pow(keypoints[18].position.x - keypoints[19].position.x, 2) +
+          Math.pow(keypoints[18].position.y - keypoints[19].position.y, 2)
+      );
+    }
+
+    // Assuming keypoints 20 and 21 are the knee and ankle respectively
+    if (keypoints[19] && keypoints[13]) {
+      height_in_pixels += Math.sqrt(
+        Math.pow(keypoints[19].position.x - keypoints[13].position.x, 2) +
+          Math.pow(keypoints[19].position.y - keypoints[13].position.y, 2)
+      );
+    }
+
+    if (keypoints[13] && keypoints[15]) {
+      height_in_pixels += Math.sqrt(
+        Math.pow(keypoints[13].position.x - keypoints[15].position.x, 2) +
+          Math.pow(keypoints[13].position.y - keypoints[15].position.y, 2)
+      );
+    }
+    const height_in_cm = height_in_pixels * cm_per_pixel;
+    let recentHeights = [];
+    recentHeights.push(height_in_cm);
+    let averageHeight = recentHeights.reduce((a, b) => a + b, 0) / recentHeights.length;
+
+console.log(averageHeight.toFixed(2) + 9.5);
+    //console.log(cm_per_pixel);
+    //console.log("tyuik : " + height_in_pixels);
+  }
 }
 
 /**
@@ -145,13 +199,13 @@ export function drawSkeleton(keypoints, minConfidence, ctx, scale = 1) {
  */
 export function drawKeypoints(keypoints, minConfidence, ctx, scale = 1) {
   for (let i = 0; i < keypoints.length; i++) {
-      const keypoint = keypoints[i];
+    const keypoint = keypoints[i];
 
-      // Check if the keypoint exists before trying to access its properties
-      if (keypoint && keypoint.score >= minConfidence) {
-          const {y, x} = keypoint.position;
-          drawPoint(ctx, y * scale, x * scale, 3, color);
-      }
+    // Check if the keypoint exists before trying to access its properties
+    if (keypoint && keypoint.score >= minConfidence) {
+      const { y, x } = keypoint.position;
+      drawPoint(ctx, y * scale, x * scale, 3, color);
+    }
   }
 }
 
