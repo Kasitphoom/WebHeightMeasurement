@@ -7,19 +7,19 @@ const Footer = () => {
         <nav id="nav">
           <ul>
             <li>
-              <Link to="/">
+              {/* <Link to="/">
                 <div class="icon">
                   <i class="fas fa-home"></i>
                 </div>
                 <p>HOME</p>
-              </Link>
+              </Link> */}
             </li>
             <li>
               <Link to="/shop">
                 <div class="icon">
-                  <i class="fas fa-store"></i>
+                <i class="fas fa-info-circle"></i>            
                 </div>
-                <p>SHOP</p>
+                <p>GUIDE</p>
               </Link>
             </li>
             <li class="special">
@@ -30,14 +30,14 @@ const Footer = () => {
                 <p>READY!</p>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/profile">
                 <div class="icon">
                   <i class="fas fa-user"></i>
                 </div>
                 <p>PROFILE</p>
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/setting">
                 <div class="icon">

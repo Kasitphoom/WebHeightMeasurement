@@ -27,7 +27,7 @@ footer {
   position: fixed;
   width: 100vw;
   bottom: 0;
-  background-color: #f13027;
+  background-color: #0ca5e9;
 }
 footer nav {
   width: 99%;
@@ -68,7 +68,7 @@ footer nav ul li a p {
   background-color: white;
   border-radius: 50%;
   transform: translateY(-40%);
-  border: #c32b24 solid 3px;
+  border: #0ca5e9 solid 3px;
   position: relative;
 }
 
@@ -86,7 +86,7 @@ footer nav ul li a p {
   margin: 0 auto;
 }
 .special a i {
-  color: #f13027;
+  color: #0ca5e9;
   font-size: 4.5rem;
 }
 .special a p {

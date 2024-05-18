@@ -1,7 +1,7 @@
 .exit {
   margin: 2rem;
   padding: 2rem;
-  background-color: #dc180e;
+  background-color: #0ca5e9;
   color: white;
   border-radius: 10px;
   vertical-align: middle;
@@ -12,15 +12,17 @@
 }
 .exerType {
   vertical-align: middle;
-  width: 70%;
-  background-color: white;
-  border-radius: 10px;
-  height: 7.2rem;
+  width: 100%;
+  background-color: #0ca5e9;
+  /* border-radius: 10px; */
+  /* height: 7.2rem; */
+  height: 5rem;
 }
 .exerflex {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  /* justify-content: space-around; */
+  width: 100vh;
+  /* align-items: center; */
 }
 .exerType p {
   font-size: 3rem;
@@ -32,5 +34,14 @@
 .exerType :nth-child(2) {
   text-align: right;
   margin: 1rem;
-  color: #bc140c;
+  color: #0ca5e9;
+}
+
+.divCam {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
+  height: 100vh;
+  margin: 2rem;
 }
