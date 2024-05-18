@@ -108,7 +108,7 @@ export function drawSkeleton(keypoints, minConfidence, ctx, scale = 1) {
     keypoints,
     minConfidence
   );
-
+  
   adjacentKeyPoints.forEach((keypoints) => {
     drawSegment(
       toTuple(keypoints[0].position),
@@ -118,6 +118,22 @@ export function drawSkeleton(keypoints, minConfidence, ctx, scale = 1) {
       ctx
     );
   });
+
+  drawSegment(
+    toTuple(keypoints[17].position),
+    toTuple(keypoints[18].position),
+    color,
+    scale,
+    ctx
+  );
+
+  drawSegment(
+    toTuple(keypoints[18].position),
+    toTuple(keypoints[19].position),
+    color,
+    scale,
+    ctx
+  );
 }
 
 /**
@@ -125,14 +141,13 @@ export function drawSkeleton(keypoints, minConfidence, ctx, scale = 1) {
  */
 export function drawKeypoints(keypoints, minConfidence, ctx, scale = 1) {
   for (let i = 0; i < keypoints.length; i++) {
-    const keypoint = keypoints[i];
+      const keypoint = keypoints[i];
 
-    if (keypoint.score < minConfidence) {
-      continue;
-    }
-
-    const { y, x } = keypoint.position;
-    drawPoint(ctx, y * scale, x * scale, 5, jointcolor);
+      // Check if the keypoint exists before trying to access its properties
+      if (keypoint && keypoint.score >= minConfidence) {
+          const {y, x} = keypoint.position;
+          drawPoint(ctx, y * scale, x * scale, 3, color);
+      }
   }
 }
 
