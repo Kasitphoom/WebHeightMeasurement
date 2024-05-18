@@ -79,7 +79,7 @@ const Exercise = () => {
     canvas.current.height = videoHeight;
 
     drawKeypoints(pose["keypoints"], 0.5, ctx);
-    console.log(pose["keypoints"])
+    console.log(pose["keypoints"]);
     drawSkeleton(pose["keypoints"], 0.5, ctx);
   };
   runPosenet();
@@ -111,6 +111,8 @@ const Exercise = () => {
           zIndex: 9,
           width: 414,
           height: 310.5,
+          // width: 600,
+          // height: 600,
         }}
       />
       <canvas
@@ -125,6 +127,8 @@ const Exercise = () => {
           zIndex: 9,
           width: 414,
           height: 310.5,
+          // width: 600,
+          // height: 600,
         }}
       />
       <Footer />
